@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask + React</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='dist/assets/main.css') }}">
+</head>
+<body>
+    <h1>This is Flask Rendering HTML</h1>
+    
+    <div id="root" data-context='{{ context | tojson }}'></div>
+
+    <script type="module" src="{{ url_for('static', filename='dist/assets/main.js') }}"></script>
+</body>
+</html>
